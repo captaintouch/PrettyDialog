@@ -116,6 +116,14 @@ public class PrettyDialog extends AppCompatDialog {
         return this;
     }
 
+    public PrettyDialog setBackgroundDismiss(Boolean close){
+
+        setCancelable(close);
+        setCanceledOnTouchOutside(close);
+
+        return this;
+    }
+
     public PrettyDialog addButton(String text, Integer textColor, Integer backgroundColor, /*BUTTON_TYPE type,*/ PrettyDialogCallback callback){
         PrettyDialogButton button = new PrettyDialogButton(context,text, textColor, backgroundColor, typeface, /*type,*/ callback);
         int margin = resources.getDimensionPixelSize(R.dimen.pdlg_space_1_0x);
